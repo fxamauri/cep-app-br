@@ -8,6 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#___gatsby, #gatsby-focus-wrapper, body, html {
+  height: 100%;
+}
+
 article,
 aside,
 details,
@@ -199,8 +204,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  color: black;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -208,6 +212,10 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 img {
   max-width: 100%;
@@ -230,8 +238,6 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -247,8 +253,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +268,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,8 +283,6 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -298,8 +298,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +313,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -619,4 +615,73 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+
+.page-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.25rem;
+  border-radius: .6rem;
+  margin: 1rem;
+}
+
+.icon-house {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.close-button-cep-result {
+  cursor: pointer;
+  border-bottom-left-radius: 0.6rem;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: background-color 0.5s ease;
+}
+
+.close-button-cep-result:hover {
+  cursor: pointer;
+  background-color: #f0f2f5;
+}
+.cep-result {
+  position: relative;
+  min-width: 500px;
+  padding-top: 3rem;
+}
+
+.cep-container {
+  min-width: 500px;
+}
+.cep-input-container {
+
+}
+
+.cep-input-container input {
+  width: 100%;
+  display: block;
+  border-radius: 3.125rem;
+  text-transform: none;
+  border: 0;
+  background-color: #f0f2f5;
+  height: 3.75rem;
+  padding-left: 1.25rem;
+  color: #050505
+}
+
+.cep-input-container input::placeholder {
+  color: #65676b
+}
+
+
+.cep-input-container input:focus {
+  outline: none;
 }
